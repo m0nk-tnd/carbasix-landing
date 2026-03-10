@@ -1,0 +1,62 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const metricaId = import.meta.env.PUBLIC_YANDEX_METRICA_ID;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Find profitable import vehicles faster with CarBasix" />
+    <meta
+      property="og:description"
+      content="Search across marketplaces, filter by sourcing criteria, compare listings, and estimate landed cost in one workflow."
+    />
+    <meta property="og:url" content={Astro.site?.toString()} />
+    <meta property="og:image" content="/images/og-carbasix.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString()} />
+    {metricaId && (
+      <script is:inline>
+        {`
+          (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+              if (document.scripts[j].src === r) { return; }
+            }
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+          })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+          ym(${JSON.stringify(metricaId)}, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+          });
+        `}
+      </script>
+    )}
+  </head>
+  <body>
+    <slot />
+    {metricaId && (
+      <noscript>
+        <div>
+          <img src={`https://mc.yandex.ru/watch/${metricaId}`} style="position:absolute;left:-9999px;" alt="" />
+        </div>
+      </noscript>
+    )}
+  </body>
+</html>

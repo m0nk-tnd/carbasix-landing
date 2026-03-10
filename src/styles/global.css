@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #f4f7fc;
+  --bg-soft: #ffffff;
+  --bg-accent: #ecfbf6;
+  --line: #dbe4f2;
+  --ink: #0e172a;
+  --slate: #5a6b89;
+  --brand: #18a883;
+  --brand-dark: #0f6954;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-body text-ink bg-cloud antialiased;
+  background-image:
+    radial-gradient(circle at 10% 0%, rgba(24, 168, 131, 0.12), transparent 30%),
+    radial-gradient(circle at 100% 10%, rgba(36, 110, 255, 0.08), transparent 34%);
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-gap {
+  @apply py-20 md:py-24;
+}
+
+.eyebrow {
+  @apply inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-brand-800;
+}
+
+.h2 {
+  @apply font-heading text-3xl font-bold tracking-tight text-ink md:text-4xl;
+}
+
+.subcopy {
+  @apply mt-4 max-w-3xl text-base leading-7 text-slate md:text-lg;
+}
+
+.card {
+  @apply rounded-2xl border border-mist bg-white p-6 shadow-sm;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-brand-500 px-5 py-3 text-sm font-bold text-white shadow-glow transition hover:bg-brand-600;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-xl border border-ink/15 bg-white px-5 py-3 text-sm font-bold text-ink transition hover:border-brand-400 hover:text-brand-700;
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(to right, rgba(90, 107, 137, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(90, 107, 137, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}

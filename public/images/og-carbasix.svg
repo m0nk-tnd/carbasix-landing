@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ECFBF6" />
+      <stop offset="100%" stop-color="#F4F7FC" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)" />
+  <rect x="68" y="78" width="1064" height="474" rx="28" fill="#fff" stroke="#DCE7F4" stroke-width="2" />
+  <text x="120" y="210" fill="#0E172A" font-size="62" font-family="Manrope, Arial, sans-serif" font-weight="800">
+    CarBasix
+  </text>
+  <text x="120" y="280" fill="#0E172A" font-size="44" font-family="Manrope, Arial, sans-serif" font-weight="700">
+    Find profitable import vehicles faster
+  </text>
+  <text x="120" y="340" fill="#5A6B89" font-size="30" font-family="Manrope, Arial, sans-serif" font-weight="600">
+    Search, compare, and estimate landed cost in one workflow.
+  </text>
+  <rect x="120" y="390" width="252" height="64" rx="14" fill="#18A883" />
+  <text x="170" y="432" fill="#fff" font-size="30" font-family="Manrope, Arial, sans-serif" font-weight="800">
+    Try it free
+  </text>
+</svg>

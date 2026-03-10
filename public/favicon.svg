@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="CarBasix">
+  <rect width="64" height="64" rx="14" fill="#0E172A" />
+  <path d="M14 38h36l-4-11a7 7 0 0 0-6.6-4.5H24.6A7 7 0 0 0 18 27l-4 11Z" fill="#18A883" />
+  <circle cx="22" cy="41" r="4.2" fill="#ECFBF6" />
+  <circle cx="42" cy="41" r="4.2" fill="#ECFBF6" />
+</svg>
